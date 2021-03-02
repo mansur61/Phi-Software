@@ -56,19 +56,13 @@ public class PhiTask {
                     System.out.print(urunDetay.get(i).get(0) + " , ürününün ");
                     for (int j = 1; j < urunDetay.get(i).size(); j++) {
                         if (j % 2 == 1) {
-                            if (!urunDetay.get(i).get(j).isEmpty()) {
-                                System.out.print("\tbedeni " + urunDetay.get(i).get(j)+" ");
-                            } else { System.out.print("\t"); }
+                            if (!urunDetay.get(i).get(j).isEmpty()) {  System.out.print("\tbedeni " + urunDetay.get(i).get(j)+" "); } else { System.out.print("\t"); }
                         } else {
-                            if (!urunDetay.get(i).get(j).isEmpty()) {
-                                System.out.print("rengi " + urunDetay.get(i).get(j) + " "+"\n");
-                            } else {System.out.print("\t"); }
+                            if (!urunDetay.get(i).get(j).isEmpty()) { System.out.print("rengi " + urunDetay.get(i).get(j) + " "+"\n"); } else {System.out.print("\t"); }
                         }
                     }
                 }
-            } catch (IndexOutOfBoundsException e) {
-                System.out.println(e.getMessage());
-            }
+            } catch (IndexOutOfBoundsException e) {System.out.println(e.getMessage()); }
         }else{
             System.out.println("Ürün adı ve özelliklerini belirlerken boş bırakmayın veya aynı değer girmemeye dikkat ediniz.");
         }
@@ -80,20 +74,9 @@ public class PhiTask {
                 System.out.print(urunDetay.get(i).get(0)+" , ürününün ");
                 for (int j = 1;j<urunDetay.get(i).size();j++){
                     if (j % 2 == 1){
-                        if(!urunDetay.get(i).get(j).isEmpty()){
-                            System.out.print("\tbedeni " + urunDetay.get(i).get(j)+" ");
-                        }else{
-                            System.out.print("\t");
-                        }
-
+                        if (!urunDetay.get(i).get(j).isEmpty()) {  System.out.print("\tbedeni " + urunDetay.get(i).get(j)+" "); }
                     }else{
-                        if(!urunDetay.get(i).get(j).isEmpty()) {
-                            System.out.print("rengi " + urunDetay.get(i).get(j) + " "+"\n");
-                        }else{
-                            System.out.print("\t");
-                        }
-
-                    }
+                        if (!urunDetay.get(i).get(j).isEmpty()) { System.out.print("rengi " + urunDetay.get(i).get(j) + " "+"\n"); }                    }
                 }
             }
         }catch (IndexOutOfBoundsException e) {
