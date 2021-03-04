@@ -63,7 +63,7 @@ public class PhiTask2 {
         yedek.add(pairs);
 
         //stockInfo(yedek,"S","M","XS","XL"); // D // İlgili beden boyutundan/model/renk/... stokta kaç adet olduğunu bul.
-        //stocktInfo(yedek,"S","M","XS","XL"); // E // iligili bedene ait ürünün belirlenen dinamik fiyata göre sunulması
+        //stocktInfo(yedek,"S","M","XS","XL"); // E // S - mavi - kot - 55 TL mantığında sunulması
 
 
     }
