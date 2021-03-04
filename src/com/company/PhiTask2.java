@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-İstenen çıktı
+İstenen varyasyon örneği
 
 S - mavi - kot
 S - yeşil - kot
@@ -22,6 +22,8 @@ NOT: Yukarıdaki istenilen  işlev yerine getirilmiştir. Ek özellik eklenerek.
  dinamik parametre alımı sağlatılarak dinmaik fonksiyon oluşturulmaya çalışıldı. Fakat amaca göre fonksiyon dinamik olarak
  ayarlanmıştır / ayarlanmalıdır.
  Her amacı veya görevi yerine getirmemektedir.
+
+ NOT: Birçok varyasyon üretilebilir fakat düzenleme ile 2 varyasyon bırakılmıştır.
 
 
  */
