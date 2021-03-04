@@ -145,15 +145,20 @@ public class PhiTask2 {
     }
     // C
     private  static  void stocktInfo(ArrayList<String> sizes,ArrayList<String> models){
-        for (int i = 0;i<sizes.size();i++){
-            for (int k = 0;k<models.size();k++){
-                //for (int j = 0;j<colors.size();j++){
+        try {
+            for (int i = 0;i<sizes.size();i++){
+                for (int k = 0;k<models.size();k++){
+                    //for (int j = 0;j<colors.size();j++){
                     System.out.print(sizes.get(i) +"-"+ models.get(k) + "\n");
-                //}
-               // System.out.println("-------");
+                    //}
+                    // System.out.println("-------");
+                }
+                System.out.println("\n");
             }
-            System.out.println("\n");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
+
     }
     // D
     private static void stockInfo(ArrayList<ArrayList<String>> dataseta,String ...beden){
@@ -180,64 +185,50 @@ public class PhiTask2 {
     }
     // E
     private static  void stocktInfo(ArrayList<ArrayList<String> > products,String ...boyutlar){
-        System.out.println(products);
-        ArrayList<String> tut = new ArrayList<>();
-        int sayac = 0;
-        for (String  word: boyutlar) {
-            System.out.println(word);
-            for (int j = 0; j < products.size(); j++) {
-                for (int k = 0; k < products.get(j).size(); k++) {
-                    if (word == products.get(j).get(k)) {
-                        //products.remove(products.get(j));
-                        for (int m = 0; m<products.get(j).size();m++){
-                            //if(products.get(j).get(k) != products.get(j).get(m+1)) {
+        //System.out.println(products);
+        try {
+            ArrayList<String> tut = new ArrayList<>();
+
+            for (String  word: boyutlar) {
+                System.out.println(word);
+                for (int j = 0; j < products.size(); j++) {
+                    for (int k = 0; k < products.get(j).size(); k++) {
+                        if (word == products.get(j).get(k)) {
+                            //products.remove(products.get(j));
+                            for (int m = 0; m<products.get(j).size();m++){
+                                //if(products.get(j).get(k) != products.get(j).get(m+1)) {
                                 tut.add(products.get(j).get(m));
-                            //}
+                                //}
+                            }
+                            products.remove(products.get(j));
+                            break;
                         }
-                        products.remove(products.get(j));
-                        break;
                     }
                 }
             }
-        }
-        System.out.println(products);
-        System.out.println(tut);
-       // boolean kontrol = false;
-        for (int i = 0;i<tut.size();i++){ // size
-            for (int w = i+1;w<tut.size();w++) {
-                if(tut.get(i) == tut.get(w)){
-                    tut.remove(tut.get(w));
-                }
-            }
+            //System.out.println(products);
             //System.out.println(tut);
-            for (int j = 0;j<products.get(1).size();j++){ //models
-              for (int k = 0;k<products.get(2).size();k++){ //pairs
-                  for (int m = 0;m<products.get(0).size();m++){ //renk
-                      System.out.println(tut.get(i) + "-"+products.get(0).get(m) + "-"+products.get(1).get(j)+"-"+products.get(2).get(k));
-                  }
-
-              }
-              System.out.println("---------------");
-            }
-
-        }
-
-
-
-       // int m = 0;
-        /*
-        for (int i = 0;i<tut.size();i++){  // size
-            //sSystem.out.println(tut.get(i) + "-"+ i);
-            for (int j = 0;j<products.get(1).size();j++){ // models
-                for (int k = 0;k<products.get(0).size();k++){  // color
-                     System.out.println(tut.get(i)  +"-"+ products.get(0).get(k)+ "-" +products.get(1).get(j));
+            for (int i = 0;i<tut.size();i++){ // size
+                for (int w = i+1;w<tut.size();w++) {
+                    if(tut.get(i) == tut.get(w)){
+                        tut.remove(tut.get(w));
+                    }
                 }
-                System.out.println("-------");
+                //System.out.println(tut);
+                for (int j = 0;j<products.get(1).size();j++){ //models
+                    for (int k = 0;k<products.get(2).size();k++){ //pairs
+                        for (int m = 0;m<products.get(0).size();m++){ //renk
+                            System.out.println(tut.get(i) + "-"+products.get(0).get(m) + "-"+products.get(1).get(j)+"-"+products.get(2).get(k));
+                        }
+
+                    }
+                    System.out.println("---------------");
+                }
+
             }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
-        */
-
-
 
 
     }
